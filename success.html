@@ -17,7 +17,14 @@
     </style>
   </head>
   <body>
-      <h1>success...</h1>
-
+      <h1>Success...</h1>
+      <script>
+        const load = () => {
+            // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
+            window.parent.postMessage('Success', '*');
+        };
+        window.onload = load;
+        console.log('Success Page');
+    </script>
   </body>
 </html>
