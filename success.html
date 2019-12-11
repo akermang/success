@@ -22,6 +22,8 @@
         const load = () => {
             // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
             window.parent.postMessage('Success', '*');
+            const hostname = window.parent && window.parent.location && window.parent.location.hostname;  
+            console.log('Success-parent-hostname:', hostname)
         };
         window.onload = load;
         console.log('Success Page');
